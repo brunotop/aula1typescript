@@ -1,28 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Aluno = void 0;
-var Aluno = /** @class */ (function () {
-    function Aluno(nomedoaluno) {
-        this.notas = [];
-        this.media = [];
-        this.nomedoaluno = nomedoaluno;
-    }
-    Aluno.prototype.pesquisadosalunos = function () {
-        console.log("O nome do aluno se chama: ".concat(this.nomedoaluno));
-        console.log("A primeira nota do aluno \u00E9  ".concat(this.notas));
-        console.log("A segunda nota do aluno \u00E9 ".concat(this.notas));
-        console.log("A terceira nota do aluno \u00E9 ".concat(this.notas));
-    };
-    Aluno.prototype.setNotas = function (n1, n2, n3) {
-        this.notas.push(n1);
-        this.notas.push(n2);
-        this.notas.push(n3);
-    };
-    Aluno.prototype.getMedia = function () {
-        var media = (this.notas[0] + this.notas[1] + this.notas[2]) / 3;
-        return media;
-    };
-    return Aluno;
-}());
-exports.Aluno = Aluno;
+var leitor = require("readline-sync");
+function main() {
+    var nome = leitor.question("insira o nome do item: ");
+    var valor = leitor.questionFloat("Insira o valor do item: ");
+    var desconto = leitor.questionInt("Insira o desconto: ");
+    var valordesconto = ((100 - desconto) / 100);
+    console.log("O nome do item \u00E9: ".concat(nome));
+    console.log("O valor do item \u00E9: ".concat(valor));
+    console.log("O valor do desconto \u00E9: ".concat(valor * valordesconto));
+}
 main();

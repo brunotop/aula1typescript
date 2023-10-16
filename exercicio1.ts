@@ -1,27 +1,7 @@
-import * as leitor from "readline-sync"
-
-export class Livro {
-    nomedolivro: String;
-    autor: String;
-    anopublicacao: Number;
-
-    constructor(nome: String, Autor: String, anopublicacao: Number){
-        this.nomedolivro = nome;
-        this.autor = Autor;
-        this.anopublicacao = anopublicacao;
-    } 
-     
-    obterDetalhes(){
-        console.log(`Nome do Livro é: ${this.nomedolivro}`)
-        console.log(`O autor desse livro é: ${this.autor}`)
-        console.log(`O ano de publicacao deste livro é: ${this.anopublicacao}`)
-    }
-}
-function main(): void{
-    let nomedolivro = leitor.question("Qual o nome do livro? ")
-    let autor = leitor.question("Quem é o autor do livro? ")
-    let anopublicacao = leitor.questionInt("Qual o ano que esse livro foi publicado? ")
-    let livro = new Livro(nomedolivro, autor, anopublicacao)
-    livro.obterDetalhes()
+function main() {
+    console.log("Use the val keyword when the value doesn't change.");
+    console.log("Use the var keyword when the value can change.");
+    console.log("When you define a function, you define the parameters that can be passed to it.");
+    console.log("When you call a function, you pass arguments for the parameters.");
 }
 main()

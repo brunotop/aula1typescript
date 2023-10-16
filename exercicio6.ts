@@ -1,7 +1,4 @@
-import * as from "readline-sync"
+import * as leitor from "readline-sync"
+import { Circulo } from "./exercicio7"
 
-function main() {
-    let nome = leitor.question("insira seu nome: ")
-    let OS = leitor.question("Insiraseu OS: ")
-    displayAlert
-}
+let raio = leitor.questionInt("informe")

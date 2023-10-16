@@ -1,11 +1,11 @@
 {
-  "name": "aula2",
+  "name": "aula1-typescript",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "exercicio1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tsc exercicio3.ts && node exercicio3"
+    "start": "npx tsc questaoswith.ts && node questaoswith"
   },
   "author": "",
   "license": "ISC",

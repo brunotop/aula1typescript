@@ -1,30 +1,12 @@
 import * as leitor from "readline-sync"
+function main(){
+    let nome = leitor.question("insira o nome do item: ");
+    let valor = leitor.questionFloat("Insira o valor do item: ");
+    let desconto = leitor.questionInt("Insira o desconto: ");
+    let valordesconto = ((100-desconto)/100);
+    console.log(`O nome do item é: ${nome}`);
+    console.log(`O valor do item é: ${valor}`);
+    console.log(`O valor do desconto é: ${valor*valordesconto}`);
 
-export class Aluno {
-    nomedoaluno: String;
-    notas: Number[] = []
-    media:Array<Number>[] = []
- 
-    constructor(nomedoaluno: String){
-    this.nomedoaluno = nomedoaluno;
-    }
-
-    pesquisadosalunos(){
-        console.log(`O nome do aluno se chama: ${this.nomedoaluno}`)
-        console.log(`A primeira nota do aluno é  ${this.notas}`)
-        console.log(`A segunda nota do aluno é ${this.notas}`)
-        console.log(`A terceira nota do aluno é ${this.notas}`)
-    }
-    setNotas(n1: Number, n2: Number, n3: Number){
-        this.notas.push(n1)
-        this.notas.push(n2)
-        this.notas.push(n3)
-        
-    }
-    getMedia(): number{
-        let media = (this.notas[0],  this.notas[1],  this.notas[2]) / 3
-        return media
-    }
 }
-
 main()
